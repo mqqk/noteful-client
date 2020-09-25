@@ -12,7 +12,7 @@ export default class NotePageNav extends Component{
             <CircleButton
                 tag='button'
                 role='link'
-                onClick={() => this.context.goBack()}
+                // onClick={() => this.context.goBack()}
                 className="NotePageNav__back-button"
             >
                 <FontAwesomeIcon icon='chevron-left' />

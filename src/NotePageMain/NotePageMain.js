@@ -6,6 +6,7 @@ import NoteHelpersContext from '../NoteHelpersContext';
 export default class NotePageMain extends Component{
     static contextType=NoteHelpersContext;
     render(){
+        console.log(this.context.notes)
     return(
         <section className='NotePageMain'>
             <Note
@@ -14,9 +15,9 @@ export default class NotePageMain extends Component{
                 modified={this.context.notes.modified}
             />
             <div className="NotePageMain__content">
-                {this.context.notes.content.split(/\n \r|\n/).map((para,i) =>
+                {/* {this.context.notes.content.split(/\n \r|\n/).map((para,i) =>
                     <p key={i}>{para}</p>
-                )}
+                )} */}
             </div>
         </section>
     )
