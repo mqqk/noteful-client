@@ -4,6 +4,7 @@ import CircleButton from '../CircleButton/CircleButton';
 import './NotePageNav.css';
 
 export default function NotePageNav(props) {
+    console.log('hi',props)
     return(
         <div className='NotePageNav'>
             <CircleButton

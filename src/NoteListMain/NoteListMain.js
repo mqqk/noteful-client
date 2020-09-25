@@ -8,7 +8,7 @@ import './NoteListMain.css';
 
 export default function NoteListMain(props){
 
-    console.log('hi',props);
+    // console.log('hi',props);
     return (
         <section className="NoteListMain">
             <ul>
