@@ -14,7 +14,7 @@ export default class NoteListMain extends Component{
     return (
         <section className="NoteListMain">
             <ul>
-                {this.context.notes.notes.map(note =>
+                {this.context.notes.map(note =>
                     <li key={note.id}>
                         <Note
                             id={note.id}

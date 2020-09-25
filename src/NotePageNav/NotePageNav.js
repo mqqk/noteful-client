@@ -12,7 +12,7 @@ export default class NotePageNav extends Component{
             <CircleButton
                 tag='button'
                 role='link'
-                // onClick={() => this.context.goBack()}
+                onClick={() => this.context.goBack()}
                 className="NotePageNav__back-button"
             >
                 <FontAwesomeIcon icon='chevron-left' />
@@ -21,7 +21,7 @@ export default class NotePageNav extends Component{
             </CircleButton>
             {this.context.folder && (
                 <h3 className="NotePageNav__folder-name">
-                    {this.context.folder.folder.name}
+                    {this.context.folder.name}
                 </h3>
             )}
         </div>

@@ -107,13 +107,14 @@ countNotesForFolder = (notes=[], folderId) =>
 
 
   render(){
-    // console.log(this.state);
+    console.log(this.state.folders);
     const contextValue = {
-      notes:this.state,
-      folders:this.state,
+      notes:this.state.notes,
+      folders:this.state.folders,
       findFolder:this.findFolder,
       findNote:this.findNote,
       getNotesForFolder:this.getNotesForFolder,
+      countNotesForFolder:this.countNotesForFolder,
     }
 
     // console.log(contextValue);

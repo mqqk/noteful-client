@@ -9,12 +9,12 @@ export default class NotePageMain extends Component{
     return(
         <section className='NotePageMain'>
             <Note
-                id={this.context.notes.notes.id}
-                name={this.context.notes.notes.name}
-                modified={this.context.notes.notes.modified}
+                id={this.context.notes.id}
+                name={this.context.notes.name}
+                modified={this.context.notes.modified}
             />
             <div className="NotePageMain__content">
-                {this.notes.notes.content.split(/\n \r|\n/).map((para,i) =>
+                {this.context.notes.content.split(/\n \r|\n/).map((para,i) =>
                     <p key={i}>{para}</p>
                 )}
             </div>

@@ -6,6 +6,7 @@ const NoteHelpersContext = React.createContext({
     findFolder:() =>{},
     findNote:() => {},
     getNotesForFolder:() => {},
+    countNotesForeFolder:() => {},
 
     })
 
