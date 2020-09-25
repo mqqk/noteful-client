@@ -1,18 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Note from '../Note/Note';
 import CircleButton from '../CircleButton/CircleButton';
 import './NoteListMain.css';
+import NoteHelpersContext from '../NoteHelpersContext';
 
 
-export default function NoteListMain(props){
-
-    console.log('hi',props);
+export default class NoteListMain extends Component{
+    static contextType=NoteHelpersContext;
+    render(){
+    console.log('hi',this.context);
     return (
         <section className="NoteListMain">
             <ul>
-                {props.notes.map(note =>
+                {this.context.notes.notes.map(note =>
                     <li key={note.id}>
                         <Note
                             id={note.id}
@@ -37,7 +39,7 @@ export default function NoteListMain(props){
         </section>
     )
 }
-
+}
 NoteListMain.defaultProps = {
     notes:[],
 }

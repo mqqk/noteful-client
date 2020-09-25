@@ -1,31 +1,35 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CircleButton from '../CircleButton/CircleButton';
 import './NotePageNav.css';
+import NoteHelpersContext from '../NoteHelpersContext';
 
-export default function NotePageNav(props) {
+export default class NotePageNav extends Component{
+    static contextType=NoteHelpersContext;
+    render(){
     return(
         <div className='NotePageNav'>
             <CircleButton
                 tag='button'
                 role='link'
-                onClick={() => props.history.goBack()}
+                // onClick={() => this.context.goBack()}
                 className="NotePageNav__back-button"
             >
                 <FontAwesomeIcon icon='chevron-left' />
                 <br />
                 Back
             </CircleButton>
-            {props.folder && (
+            {this.context.folder && (
                 <h3 className="NotePageNav__folder-name">
-                    {props.folder.name}
+                    {this.context.folder.folder.name}
                 </h3>
             )}
         </div>
     )
 }
+}
 
-NotePageNav.defaultProps = {
+NotePageNav.defaultthisProps = {
     history:{
         goBack:() => {}
     }
